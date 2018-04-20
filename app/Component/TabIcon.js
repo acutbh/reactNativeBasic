@@ -6,7 +6,6 @@ import {
 } from 'react-native'
 
 const TabIcon = (props) => {
-  console.log(props.tintColor, 'x');
   return(
     <View>
       <Image
