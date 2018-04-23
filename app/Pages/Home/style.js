@@ -3,7 +3,7 @@ import * as BasicStyle from '../../Lib/basicStyle';
 
 export const Basic = BasicStyle;
 
-export const Wrap = styled.FlatList`
+export const Wrap = styled.View`
   flex: 1;
 `;
 
@@ -57,3 +57,70 @@ export const TPName = styled.Text`
 `;
 
 // 近期活动
+export const RecentActivity = styled.TouchableHighlight.attrs({
+  underlayColor: Basic.tgbg,
+  activeOpacity: 1
+})`
+  margin-top: ${px2dp(2)}px;
+  background: #fff;
+  padding: ${px2dp(30)}px;
+`;
+// ${Basic.IntervalLR.inlineStyle.rules.join('')}
+
+export const RAWrap = styled.View`
+  flex-direction: row;
+`;
+
+export const RAImg = Basic.ImgBox.extend`
+  width: ${px2dp(160)}px;
+  height: ${px2dp(160)}px;
+`;
+
+export const RAContent = styled.View`
+  height: ${px2dp(160)}px;
+  padding-left: ${px2dp(20)}px;
+  flex: 1;
+`;
+
+export const RAName = styled.Text.attrs({
+  numberOfLines: 1
+})`
+  margin-top: ${px2dp(-2)}px;
+  font-size: ${FONT_SIZE(16)}px;
+  color: ${Basic.darkGray};
+`;
+
+export const RAMain = styled.Text.attrs({
+  numberOfLines: 2
+})`
+  margin-top: ${px2dp(10)}px;
+  font-size: ${FONT_SIZE(14)}px;
+  color: ${Basic.darkGray};
+`;
+
+export const RABtm = styled.View`
+  margin-top: ${px2dp(20)}px;
+  height: ${px2dp(40)}px;
+  flex-direction: row;
+  align-items: center;
+  background: #b9b9b9;
+`;
+
+export const RAPrice = styled.Text`
+  font-size: ${FONT_SIZE(18)}px;
+  color: ${Basic.red};
+`;
+
+export const RAPriceOld = styled.Text`
+  padding-left: ${px2dp(10)}px;
+  font-size: ${FONT_SIZE(14)}px;
+  text-decoration-line: line-through;
+  color: ${Basic.lightGray};
+`;
+
+export const RANum = styled.Text`
+  flex: 1;
+  text-align: right;
+  color: ${Basic.gray};
+  font-size: ${FONT_SIZE(14)}px;
+`;
