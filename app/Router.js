@@ -19,16 +19,12 @@ import {
   Stack,
   Lightbox,
 } from 'react-native-router-flux';
-import {Theme} from 'teaset';
 
-import TabIcon from './Component/TabIcon';
-// import TabMiddleIcon from './Component/TabMiddleIcon'
-
+import TabIcon from './Components/TabIcon';
 
 import Home from './Pages/Home/index';
 import Scan from './Pages/Scan/index';
 import My from './Pages/My/index';
-
 
 import Login from './Pages/Login/Login';
 import LoginPublic from './Pages/Login/LoginPublic';

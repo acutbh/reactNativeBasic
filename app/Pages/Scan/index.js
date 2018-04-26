@@ -1,7 +1,3 @@
-/**
- * Created by Rabbit on 2017/11/3.
- */
-
 import React, {Component} from 'react';
 import {
     StyleSheet,

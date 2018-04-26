@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 // import pxtorem from './pxtorem';
 
+export const Wrap = styled.View`
+  flex: 1;
+`;
+
 export const ImgBox = styled.View`
   background: #f5f5f5;
   overflow: hidden;
