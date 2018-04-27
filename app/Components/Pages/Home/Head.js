@@ -26,9 +26,9 @@ export default class Head extends Component {
               activeDot={<Style.CarCtrl active></Style.CarCtrl>}
             />
           }>
-          <Image style={{width: px2dp(750), height: px2dp(400)}} resizeMode='cover' source={Images.banner} />
-          <Image style={{width: px2dp(750), height: px2dp(400)}} resizeMode='cover' source={Images.banner} />
-          <Image style={{width: px2dp(750), height: px2dp(400)}} resizeMode='cover' source={Images.banner} />
+          <Style.CarImg resizeMode='cover' source={Images.banner} />
+          <Style.CarImg resizeMode='cover' source={Images.banner} />
+          <Style.CarImg resizeMode='cover' source={Images.banner} />
         </Carousel>
         <Style.TemplateHead>
           <Style.TemplateTitle>第三方服务</Style.TemplateTitle>

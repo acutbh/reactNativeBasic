@@ -23,6 +23,9 @@ export default class List extends Component {
 
   // 获取活动列表
   getActivity() {
+    // 做了模拟页数判断
+    if (this.state.paging.current) return false;
+
     this.timer = setTimeout(() => {
       const nextPage = this.state.paging.current + 1;
       let data = [
@@ -130,6 +133,7 @@ export default class List extends Component {
       this.setState({
         paging: Object.assign({},this.state.paging,{current: nextPage}),
         listData: [...this.state.listData, ...data],
+        loadState: false,
       });
     }, 5000);
   }

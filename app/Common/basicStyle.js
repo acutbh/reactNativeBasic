@@ -30,5 +30,6 @@ export const mainColor = '#FFBF05'
 export const red = '#e94f4f';
 export const darkGray = '#333';
 export const gray = '#666';
-export const lightGray = '#B7B7B7';
+export const ashGray = '#999';
+export const lightGray = '#B7B7B7'; // 禁用文字使用
 export const tgbg = '#f8f8f8'; // 鼠标点击时的背景色

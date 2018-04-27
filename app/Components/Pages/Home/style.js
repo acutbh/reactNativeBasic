@@ -1,7 +1,12 @@
 import styled from 'styled-components';
-import * as BasicStyle from '../../../Lib/basicStyle';
+import * as BasicStyle from '../../../Common/basicStyle';
 
 export const Basic = BasicStyle;
+
+export const CarImg = styled.Image`
+  width: ${px2dp(750)}px;
+  height: ${px2dp(400)}px;
+`;
 
 export const CarCtrl = styled.Text`
   background-color: rgba(255,255,255,${props=>props.active?.8:.4});

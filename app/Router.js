@@ -60,7 +60,10 @@ const router = (...props) => (
           key="tabbar"        // 唯一标识
           wrap={true}         // 自动使用自己的导航栏包装每个场景
           showLabel={false}   // 显示文字
-          tabBarStyle={styles.tabBarStyle} // tabBar的样式
+          tabBarStyle={{
+            backgroundColor: '#fff',
+            height: px2dp(96),
+          }} // tabBar的样式
           swipeEnabled={false}// 是否可以滑动
           headerMode='screen' // 页面切换方式
           icon={TabIcon}      // 自定义Icon显示方式
@@ -126,10 +129,3 @@ const router = (...props) => (
 );
 
 export default router;
-
-const styles = StyleSheet.create({
-  tabBarStyle: {
-    backgroundColor: '#fff',
-    height: px2dp(96),
-  },
-});
