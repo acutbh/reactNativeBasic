@@ -115,7 +115,7 @@ export default class List extends Component {
           <Style.RecentActivity>
             <Style.RAWrap>
               <Style.RAImg>
-                <Style.Basic.Img resizeMode='cover' source={item.img}></Style.Basic.Img>
+                <Style.Basic.Img source={item.img}></Style.Basic.Img>
               </Style.RAImg>
               <Style.RAContent>
                 <Style.RAName>{item.name}</Style.RAName>

@@ -11,7 +11,7 @@ const TabIcon = (props) => {
   return(
     <View>
       <Style.Img source={!props.focused ? props.image : props.selectedImage}/>
-      <Style.TabName tintColor={props.tintColor}>
+      <Style.TabName tintColor={props.focused ? Style.Basic.mainColor : Style.Basic.darkGray}>
         {props.title}
       </Style.TabName>
     </View>

@@ -1,16 +1,14 @@
-/**
- * Created by Rabbit on 2017/11/3.
- */
-
 import React, {Component} from 'react';
 import {
-  StyleSheet,
   Text,
   View,
-  Image,
 } from 'react-native';
 
-export default class Test3 extends Component {
+import Head from '../../Components/Pages/My/Head';
+
+import * as Style from './style';
+
+export default class My extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -18,15 +16,10 @@ export default class Test3 extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>扫描</Text>
+      <View>
+        <Head></Head>
+        <Text>我的</Text>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});

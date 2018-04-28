@@ -26,9 +26,9 @@ export default class Head extends Component {
               activeDot={<Style.CarCtrl active></Style.CarCtrl>}
             />
           }>
-          <Style.CarImg resizeMode='cover' source={Images.banner} />
-          <Style.CarImg resizeMode='cover' source={Images.banner} />
-          <Style.CarImg resizeMode='cover' source={Images.banner} />
+          <Style.CarImg source={Images.banner} />
+          <Style.CarImg source={Images.banner} />
+          <Style.CarImg source={Images.banner} />
         </Carousel>
         <Style.TemplateHead>
           <Style.TemplateTitle>第三方服务</Style.TemplateTitle>
@@ -37,7 +37,7 @@ export default class Head extends Component {
           <Style.TPItem onPress={() => {Actions.Login()}}>
             <View>
               <Style.TPImg>
-                <Style.Basic.Img resizeMode='cover' source={Images.banner}></Style.Basic.Img>
+                <Style.Basic.Img source={Images.banner}></Style.Basic.Img>
               </Style.TPImg>
               <Style.TPName>服务一</Style.TPName>
             </View>
@@ -45,7 +45,7 @@ export default class Head extends Component {
           <Style.TPItem>
             <View>
               <Style.TPImg>
-                <Style.Basic.Img resizeMode='cover' source={Images.banner}></Style.Basic.Img>
+                <Style.Basic.Img source={Images.banner}></Style.Basic.Img>
               </Style.TPImg>
               <Style.TPName>服务二</Style.TPName>
             </View>
@@ -53,7 +53,7 @@ export default class Head extends Component {
           <Style.TPItem>
             <View>
               <Style.TPImg>
-                <Style.Basic.Img resizeMode='cover' source={Images.banner}></Style.Basic.Img>
+                <Style.Basic.Img source={Images.banner}></Style.Basic.Img>
               </Style.TPImg>
               <Style.TPName>服务三</Style.TPName>
             </View>

@@ -10,15 +10,12 @@ export const ImgBox = styled.View`
   overflow: hidden;
 `;
 
-export const Img = styled.Image`
+export const Img = styled.Image.attrs({
+  resizeMode: (props)=>props.resizeMode || 'cover',
+})`
   width: 100%;
   height: 100%;
 `;
-//
-// export const Circle = styled.div`
-//   border-radius: 100%;
-//   overflow: hidden;
-// `;
 
 export const IntervalLR = styled.View`
   padding-left: ${px2dp(30)}px;

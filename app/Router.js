@@ -71,8 +71,6 @@ const router = (...props) => (
           tabBarPosition={'bottom'}       // tabbar在顶部还是底部，iOS默认顶部，安卓默认顶部
           activeBackgroundColor='white'   // 选中tabbar的背景色
           inactiveBackgroundColor='white' // 未选中tabbar的背景色
-          activeTintColor='#FFBF05'       // 选中tabbar图标的颜色
-          inactiveTintColor='#333'        // 未选中tabbar图标的颜色
         >
           <Stack key="Home"
                  title={'首页'}
