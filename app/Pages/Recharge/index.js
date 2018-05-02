@@ -6,7 +6,7 @@ import {
   Image,
 } from 'react-native';
 
-export default class Scan extends Component {
+export default class Recharge extends Component {
   constructor(props) {
     super(props);
     this.state = {};

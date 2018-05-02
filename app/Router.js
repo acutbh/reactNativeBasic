@@ -23,7 +23,7 @@ import {
 import TabIcon from './Components/TabIcon';
 
 import Home from './Pages/Home/index';
-import Scan from './Pages/Scan/index';
+import Recharge from './Pages/Recharge/index';
 import My from './Pages/My/index';
 
 import Login from './Pages/Login/Login';
@@ -63,6 +63,7 @@ const router = (...props) => (
           tabBarStyle={{
             backgroundColor: '#fff',
             height: px2dp(96),
+            borderTopColor: '#fff',
           }} // tabBar的样式
           swipeEnabled={false}// 是否可以滑动
           headerMode='screen' // 页面切换方式
@@ -80,13 +81,13 @@ const router = (...props) => (
           >
             <Scene component={Home} key="key_Home"/>
           </Stack>
-          <Stack key='Scan'
+          <Stack key='Recharge'
                  hideNavBar
                  title='扫描'
-                 image={Images.scan}
-                 selectedImage={Images.scanActive}
+                 image={Images.recharge}
+                 selectedImage={Images.rechargeActive}
           >
-            <Scene component={Scan} key="key_Scan"/>
+            <Scene component={Recharge} key="key_Recharge"/>
           </Stack>
           <Stack key="My"
                  hideNavBar
@@ -99,7 +100,7 @@ const router = (...props) => (
         </Tabs>
         {/*// 推荐把需要的路由放在<Tabs/>后面，跳转的时候通过key，Actions.Test3_key*/}
         <Scene component={Home} key="key_Home"/>
-        <Scene component={Scan} key="key_Scan"/>
+        <Scene component={Recharge} key="key_Recharge"/>
         <Scene component={My} key="key_My"/>
       </Stack>
       <Stack gesturesEnabled={false} key="Login">

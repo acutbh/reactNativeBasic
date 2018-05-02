@@ -3,6 +3,9 @@ import * as BasicStyle from '../../../Common/basicStyle';
 
 export const Basic = BasicStyle;
 
+export const Head = styled.View`
+`;
+
 export const CarImg = styled.Image`
   width: ${px2dp(750)}px;
   height: ${px2dp(400)}px;
@@ -42,7 +45,6 @@ export const TPItem = styled.TouchableHighlight.attrs({
   flex: 1;
   padding: 0 ${px2dp(15)}px;
   justify-content: center;
-
 `;
 
 export const TPImg = Basic.ImgBox.extend`

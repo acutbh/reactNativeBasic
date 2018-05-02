@@ -12,9 +12,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <Style.Basic.Wrap>
+      <Style.Basic.PageWrap>
         <List/>
-      </Style.Basic.Wrap>
+      </Style.Basic.PageWrap>
     );
   }
 }

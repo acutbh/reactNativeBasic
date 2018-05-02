@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {
-  View,
-  Image,
+  View
 } from 'react-native';
 import {
   Carousel,
@@ -17,7 +16,7 @@ export default class Head extends Component {
 
   render() {
     return (
-      <View>
+      <Style.Head>
         <Carousel
           style={{height: px2dp(400)}}
           control={
@@ -62,7 +61,7 @@ export default class Head extends Component {
         <Style.TemplateHead interval>
           <Style.TemplateTitle>近期活动</Style.TemplateTitle>
         </Style.TemplateHead>
-      </View>
+      </Style.Head>
     );
   }
 }

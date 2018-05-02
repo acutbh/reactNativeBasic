@@ -154,6 +154,8 @@ export default class List extends Component {
           keyExtractor={(item,index)=>index}
           onEndReachedThreshold={.7}
           onEndReached={this.pullDown}
+          refreshing={false}
+          onRefresh={()=>{console.log('545');}}
         />
       </Style.Basic.Wrap>
     );

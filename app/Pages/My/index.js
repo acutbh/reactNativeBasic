@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import {
-  Text,
   View,
+  ScrollView,
+  RefreshControl
 } from 'react-native';
 
 import Head from '../../Components/Pages/My/Head';
+import SkipList from '../../Components/Pages/My/SkipList';
+import Login from '../../Components/Pages/My/Login';
 
 import * as Style from './style';
 
@@ -14,12 +17,22 @@ export default class My extends Component {
     this.state = {};
   }
 
+  login = () => {
+    console.log('登录');
+  }
+
+  // 下拉加载
+  refresh = () => {
+    console.log('下拉加载');
+  }
+
   render() {
     return (
-      <View>
-        <Head></Head>
-        <Text>我的</Text>
-      </View>
+      <Style.PageWrap refreshControl={<Style.Basic.RefreshControl onRefresh={this.refresh} refreshing={true} />}>
+        <Head />
+        <SkipList />
+        <Login onClick={this.login} type='block' />
+      </Style.PageWrap>
     );
   }
 }
