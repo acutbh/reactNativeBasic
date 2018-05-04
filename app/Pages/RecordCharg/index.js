@@ -9,13 +9,9 @@ import {
 
 import {NavigationBar} from 'teaset';
 
-import Head from '../../Components/Pages/My/Head';
-import SkipList from '../../Components/Pages/My/SkipList';
-import Login from '../../Components/Pages/My/Login';
-
 import * as Style from './style';
 
-export default class My extends Component {
+export default class RecordCharg extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -33,10 +29,15 @@ export default class My extends Component {
   render() {
     return (
       <Style.PageWrap refreshControl={<Style.Basic.RefreshControl onRefresh={this.refresh} refreshing={false} />}>
-        <NavigationBar hidden={true} />
-        <Head />
-        <SkipList />
-        <Login onClick={this.login} type='block' />
+        <NavigationBar title='登录'
+                       style={{height: 74, backgroundColor: '#3ea469'}}
+                       statusBarStyle='default'
+                       rightView={
+                         <TouchableOpacity onPress={() => Actions.pop()}>
+                           <Text>关闭</Text>
+                         </TouchableOpacity>
+                       }
+        />
       </Style.PageWrap>
     );
   }

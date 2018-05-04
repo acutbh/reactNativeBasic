@@ -13,7 +13,7 @@ export default class Login extends Component {
     return (
       <Style.Skip onPress={this.props.onClick} type={this.props.type}>
         <Style.SkipBox>
-          <Style.SkipText login={true}>{this.props.type?'退出登录':'立即登录'}</Style.SkipText>
+          <Style.SkipText login={true}>{this.props.login?'退出登录':'立即登录'}</Style.SkipText>
         </Style.SkipBox>
       </Style.Skip>
     );

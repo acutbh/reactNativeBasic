@@ -3,10 +3,15 @@ import * as BasicStyle from '../../../Common/basicStyle';
 
 export const Basic = BasicStyle;
 
+export const BaseView = styled.ScrollView`
+  margin-top: ${px2dp(10)}px;
+  flex: 1;
+`;
+
 export const Wrap = styled.View`
   background: ${Basic.mainColor};
   flex-direction: row;
-  padding-top: ${px2dp(40)}px;
+  padding-top: ${px2dp(40) + statusBarHeight}px;
   padding-bottom: ${px2dp(40)}px;
   ${Basic.IntervalLR.inlineStyle.rules.join('')}
 `;

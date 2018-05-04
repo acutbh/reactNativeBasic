@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, AsyncStorage, PixelRatio, Platform, Alert } from 'react-native';
+import { Dimensions, AsyncStorage, PixelRatio, Platform, Alert, StatusBar } from 'react-native';
 
 // 项目中的图片可以通过Images.xxx 获取
 import { Images } from '../Resources/index';
@@ -55,5 +55,7 @@ global.Alert = Alert;
 global.AsyncStorage = AsyncStorage;
 // 弹框Toast
 global.Toast = Toast;
+// 导航条的高度
+global.statusBarHeight = StatusBar.currentHeight;
 
 

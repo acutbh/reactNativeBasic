@@ -26,6 +26,7 @@ import Home from './Pages/Home/index';
 import Recharge from './Pages/Recharge/index';
 import My from './Pages/My/index';
 
+import RecordCharg from './Pages/RecordCharg';
 import Login from './Pages/Login/Login';
 import LoginPublic from './Pages/Login/LoginPublic';
 
@@ -55,7 +56,7 @@ const router = (...props) => (
       hideNavBar
       transitionConfig={() => ({screenInterpolator: CardStackStyleInterpolator.forFadeFromBottomAndroid})}
     >
-      <Stack hideNavBar headerMode='screen' key="root">
+      <Stack hideNavBar headerMode='screen' key="tab">
         <Tabs
           key="tabbar"        // 唯一标识
           wrap={true}         // 自动使用自己的导航栏包装每个场景
@@ -103,7 +104,16 @@ const router = (...props) => (
         <Scene component={Recharge} key="key_Recharge"/>
         <Scene component={My} key="key_My"/>
       </Stack>
-      <Stack gesturesEnabled={false} key="Login">
+      <Stack gesturesEnabled={false} key="window">
+        <Scene
+          title='使用帮助'
+          key="RecordCharg"
+          component={RecordCharg}
+          gesturesEnabled={false}
+          hideNavBar
+          onExit={() => console.log('onExit')}
+          onLeft={Actions.pop}
+        />
         <Scene
           title='登录'
           key="LoginModal"

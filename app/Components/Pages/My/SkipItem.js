@@ -11,7 +11,7 @@ export default class SkipItem extends Component {
 
   render() {
     return (
-      <Style.Skip onPress={this.props.onClick} type={this.props.type}>
+      <Style.Skip onPress={()=>{this.props.onClick(this.props.site)}} type={this.props.type}>
         <Style.SkipBox>
           <Style.SkipLeft>
             <Style.Basic.Img source={this.props.icon} />

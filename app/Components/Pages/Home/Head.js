@@ -33,7 +33,7 @@ export default class Head extends Component {
           <Style.TemplateTitle>第三方服务</Style.TemplateTitle>
         </Style.TemplateHead>
         <Style.ThirdParty>
-          <Style.TPItem onPress={() => {Actions.Login()}}>
+          <Style.TPItem onPress={() => {Actions.LoginPublic()}}>
             <View>
               <Style.TPImg>
                 <Style.Basic.Img source={Images.banner}></Style.Basic.Img>

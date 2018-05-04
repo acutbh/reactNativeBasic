@@ -12,8 +12,9 @@ export default class SkipList extends Component {
     super(props);
   }
 
-  topup = () => {
+  topup = (site) => {
     console.log('点击了');
+    Actions[site]();
   }
 
   render() {
@@ -22,7 +23,7 @@ export default class SkipList extends Component {
         <Skipitem onClick={this.topup} icon={Images.myJilu}>充电记录</Skipitem>
         <Skipitem onClick={this.topup} icon={Images.myYouhuiquan} type='inline'>我的优惠券</Skipitem>
         <Skipitem onClick={this.topup} icon={Images.myChenliang} type='inline'>车辆绑定</Skipitem>
-        <Skipitem onClick={this.topup} icon={Images.myBangzhu} type='block'>使用说明</Skipitem>
+        <Skipitem onClick={this.topup} site={'RecordCharg'} icon={Images.myBangzhu} type='block'>使用说明</Skipitem>
       </View>
     );
   }

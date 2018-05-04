@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {
-  StyleSheet,
   Text,
-  View,
-  Image,
 } from 'react-native';
+
+import * as Style from './style';
+
+import {NavigationBar} from 'teaset';
 
 export default class Recharge extends Component {
   constructor(props) {
@@ -14,15 +15,10 @@ export default class Recharge extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <Style.PageWrap refreshControl={<Style.Basic.RefreshControl onRefresh={this.refresh} refreshing={false} />}>
+        <NavigationBar hidden={true} />
         <Text>scan</Text>
-      </View>
+      </Style.PageWrap>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});

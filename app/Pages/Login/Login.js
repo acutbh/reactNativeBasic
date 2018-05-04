@@ -102,7 +102,7 @@ export default class Login extends Component {
     return (
       <View style={styles.container}>
         <NavigationBar title='登录'
-                       style={{height: 64, backgroundColor: 'white'}}
+                       style={{height: 74, backgroundColor: '#3ea469'}}
                        statusBarStyle='default'
                        rightView={
                          <TouchableOpacity onPress={() => Actions.pop()}>
@@ -110,7 +110,7 @@ export default class Login extends Component {
                          </TouchableOpacity>
                        }
         />
-        <SegmentedView style={{height: SCREEN_HEIGHT - 64, marginTop: 64, backgroundColor: '#F9F9F9'}}
+        <SegmentedView style={{height: SCREEN_HEIGHT - 74, marginTop: 74, backgroundColor: '#F9F9F9'}}
                        type='carousel'
                        indicatorLineColor={'#000'}
         >
