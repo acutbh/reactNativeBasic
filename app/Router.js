@@ -22,9 +22,9 @@ import {
 
 import TabIcon from './Components/TabIcon';
 
-import Home from './Pages/Home/index';
-import Recharge from './Pages/Recharge/index';
-import My from './Pages/My/index';
+import Home from './Pages/Home';
+import Recharge from './Pages/Recharge';
+import My from './Pages/My';
 
 import RecordCharg from './Pages/RecordCharg';
 import Login from './Pages/Login/Login';
@@ -40,8 +40,7 @@ const reducerCreate = params => {
 };
 
 const onBackPress = () => {
-  console.log(Actions.state);
-  if (Actions.state.index !== 0) {
+  if (Actions.state.index === 0) {
     return false
   }
   Actions.pop()
@@ -100,34 +99,30 @@ const router = (...props) => (
           </Stack>
         </Tabs>
         {/*// 推荐把需要的路由放在<Tabs/>后面，跳转的时候通过key，Actions.Test3_key*/}
-        <Scene component={Home} key="key_Home"/>
-        <Scene component={Recharge} key="key_Recharge"/>
-        <Scene component={My} key="key_My"/>
+        <Scene component={Home} key="tab_Home"/>
+        <Scene component={Recharge} key="tab_Recharge"/>
+        <Scene component={My} key="tab_My"/>
       </Stack>
-      <Stack gesturesEnabled={false} key="window">
+      <Stack key="login">
         <Scene
-          title='使用帮助'
-          key="RecordCharg"
-          component={RecordCharg}
-          gesturesEnabled={false}
-          hideNavBar
-          onExit={() => console.log('onExit')}
-          onLeft={Actions.pop}
-        />
-        <Scene
-          title='登录'
-          key="LoginModal"
+          key="LoginRoot"
           component={Login}
-          gesturesEnabled={false}
           hideNavBar
           onExit={() => console.log('onExit')}
           onLeft={Actions.pop}
         />
         <Scene
-          title='注册'
           key="LoginPublic"
           component={LoginPublic}
-          gesturesEnabled={false}
+          hideNavBar
+          onExit={() => console.log('onExit')}
+          onLeft={Actions.pop}
+        />
+      </Stack>
+      <Stack key="RecordCharg">
+        <Scene
+          key="RecordChargRoot"
+          component={RecordCharg}
           hideNavBar
           onExit={() => console.log('onExit')}
           onLeft={Actions.pop}

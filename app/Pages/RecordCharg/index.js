@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {
   View,
-  ScrollView,
   RefreshControl,
   TouchableOpacity,
-  Text
+  Text,
+  Label
 } from 'react-native';
 
 import {NavigationBar} from 'teaset';
@@ -29,15 +29,28 @@ export default class RecordCharg extends Component {
   render() {
     return (
       <Style.PageWrap refreshControl={<Style.Basic.RefreshControl onRefresh={this.refresh} refreshing={false} />}>
-        <NavigationBar title='登录'
-                       style={{height: 74, backgroundColor: '#3ea469'}}
-                       statusBarStyle='default'
-                       rightView={
-                         <TouchableOpacity onPress={() => Actions.pop()}>
-                           <Text>关闭</Text>
-                         </TouchableOpacity>
-                       }
-        />
+        {/*<NavigationBar*/}
+          {/*title={<Style.Basic.NavText>使用帮助</Style.Basic.NavText>}*/}
+          {/*type='ios'*/}
+          {/*style={{height: 64, backgroundColor: '#555'}}*/}
+          {/*tintColor={Style.Basic.darkGray}*/}
+          {/*statusBarColor={Style.Basic.darkGray}*/}
+          {/*statusBarStyle='default'*/}
+          {/*rightView={*/}
+            {/*<TouchableOpacity onPress={() => Actions.pop()}>*/}
+              {/*<Text>关闭</Text>*/}
+            {/*</TouchableOpacity>*/}
+          {/*}*/}
+        {/*/>*/}
+        <NavigationBar style={{backgroundColor: '#eff', height:80}}
+                       type='ios'
+                       tintColor='#333'
+                       title={
+                         <View style={{flex: 1, marginTop:12, paddingLeft: 4, paddingRight: 4, alignItems: 'center'}}>
+                           <Text style={{color: '#000', fontSize: 18}}>使用帮助</Text>
+                         </View>
+                       } leftView={<NavigationBar.BackButton title='Back' />} />
+        <Text style={{marginTop:64}}>富家大室了开房接口两三点就疯狂拉升尽量开富家大室啦</Text>
       </Style.PageWrap>
     );
   }

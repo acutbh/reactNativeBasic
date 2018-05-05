@@ -1,10 +1,5 @@
 import React, {Component} from 'react';
 import {
-  View,
-  ScrollView,
-  RefreshControl,
-  TouchableOpacity,
-  Text
 } from 'react-native';
 
 import {NavigationBar} from 'teaset';

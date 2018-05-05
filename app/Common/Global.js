@@ -24,7 +24,7 @@ import Config from './Config';
 let { height, width } = Dimensions.get('window');
 
 // 系统是iOS
-global.iOS = (Platform.OS === 'ios');
+global.IOS = (Platform.OS === 'ios');
 // 系统是安卓
 global.Android = (Platform.OS === 'android');
 // 获取屏幕宽度
