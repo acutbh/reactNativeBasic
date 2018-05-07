@@ -32,6 +32,7 @@ export const Img = styled.Image.attrs({
   height: 100%;
 `;
 
+export const IntervalLRNum = px2dp(30);
 export const IntervalLR = styled.View`
   padding-left: ${px2dp(30)}px;
   padding-right: ${px2dp(30)}px;

@@ -3,6 +3,7 @@ import * as BasicStyle from '../../Common/basicStyle';
 
 export const Basic = BasicStyle;
 
-export const PageWrap = styled.ScrollView`
-  ${Basic.PageWrap.inlineStyle.rules.join('')}
+export const Wrap = styled.View`
+  flex: 1;
+  margin-top: ${px2dp(144)}px;
 `;

@@ -55,6 +55,60 @@ export default class LoginPublic extends Component {
                         this.mobile = text;
                       }}
           />
+          <LoginInput placeholder='请输入手机号'
+                      maxLength={11}
+                      onChangeText={(text) => {
+                        this.mobile = text;
+                      }}
+          />
+          <LoginInput placeholder='请输入手机号'
+                      maxLength={11}
+                      onChangeText={(text) => {
+                        this.mobile = text;
+                      }}
+          />
+          <LoginInput placeholder='请输入手机号'
+                      maxLength={11}
+                      onChangeText={(text) => {
+                        this.mobile = text;
+                      }}
+          />
+          <LoginInput placeholder='请输入手机号'
+                      maxLength={11}
+                      onChangeText={(text) => {
+                        this.mobile = text;
+                      }}
+          />
+          <LoginInput placeholder='请输入手机号'
+                      maxLength={11}
+                      onChangeText={(text) => {
+                        this.mobile = text;
+                      }}
+          />
+          <LoginInput placeholder='请输入手机号'
+                      maxLength={11}
+                      onChangeText={(text) => {
+                        this.mobile = text;
+                      }}
+          />
+          <LoginInput placeholder='请输入手机号'
+                      maxLength={11}
+                      onChangeText={(text) => {
+                        this.mobile = text;
+                      }}
+          />
+          <LoginInput placeholder='请输入手机号'
+                      maxLength={11}
+                      onChangeText={(text) => {
+                        this.mobile = text;
+                      }}
+          />
+          <LoginInput placeholder='请输入手机号'
+                      maxLength={11}
+                      onChangeText={(text) => {
+                        this.mobile = text;
+                      }}
+          />
           <LoginInput placeholder='请输入验证码'
                       isVerify={true}
                       getVerifyCode={() => {
@@ -93,11 +147,12 @@ export default class LoginPublic extends Component {
                       onPress={() => this._onRegisterPress()}
               />
               :
-              <Button title={'重置密码'}
-                      style={styles.loginButtonStyle}
-                      titleStyle={{fontSize: FONT_SIZE(14), color: '#fff'}}
-                      onPress={() => this._onResetPress()}
+              (<Button title={'重置密码'}
+                       style={styles.loginButtonStyle}
+                       titleStyle={{fontSize: FONT_SIZE(14), color: '#fff'}}
+                       onPress={() => this._onResetPress()}
               />
+              )
           }
         </View>
       </View>

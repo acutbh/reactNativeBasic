@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {  } from 'react-native';
 import { NavigationBar } from 'teaset'
-import List from '../../Components/Pages/Home/List';
+import List from './List';
 
 import * as Style from './style';
 

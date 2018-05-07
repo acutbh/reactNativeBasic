@@ -13,6 +13,7 @@ const Images = {
   myJilu: require('./images/my-jilu.png'),
   myYouhuiquan: require('./images/my-youhuiquan.png'),
   myHuiyuan: require('./images/my-huiyuan.png'),
+  search: require('./images/search.png'),
 };
 
 export default Images;

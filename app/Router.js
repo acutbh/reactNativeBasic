@@ -22,11 +22,11 @@ import {
 
 import TabIcon from './Components/TabIcon';
 
-import Home from './Pages/Home';
-import Recharge from './Pages/Recharge';
-import My from './Pages/My';
-
-import RecordCharg from './Pages/RecordCharg';
+import Home from './Components/Pages/Home'; // 首页
+import Recharge from './Components/Pages/Recharge'; // 充电
+import My from './Components/Pages/My'; // 我的
+import RecordCharg from './Components/Pages/RecordCharg'; // 充电记录
+import Help from './Components/Pages/Help'; // 使用说明
 import Login from './Pages/Login/Login';
 import LoginPublic from './Pages/Login/LoginPublic';
 
@@ -123,6 +123,15 @@ const router = (...props) => (
         <Scene
           key="RecordChargRoot"
           component={RecordCharg}
+          hideNavBar
+          onExit={() => console.log('onExit')}
+          onLeft={Actions.pop}
+        />
+      </Stack>
+      <Stack key="Help">
+        <Scene
+          key="HelpRoot"
+          component={Help}
           hideNavBar
           onExit={() => console.log('onExit')}
           onLeft={Actions.pop}

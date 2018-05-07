@@ -3,9 +3,6 @@ import * as BasicStyle from '../../../Common/basicStyle';
 
 export const Basic = BasicStyle;
 
-export const Head = styled.View`
-`;
-
 export const CarImg = styled.Image`
   width: ${px2dp(750)}px;
   height: ${px2dp(400)}px;

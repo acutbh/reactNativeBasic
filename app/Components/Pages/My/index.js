@@ -4,9 +4,9 @@ import {
 
 import {NavigationBar} from 'teaset';
 
-import Head from '../../Components/Pages/My/Head';
-import SkipList from '../../Components/Pages/My/SkipList';
-import Login from '../../Components/Pages/My/Login';
+import Head from './Head';
+import SkipList from './SkipList';
+import Login from './Login';
 
 import * as Style from './style';
 

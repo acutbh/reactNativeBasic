@@ -3,6 +3,10 @@ import * as BasicStyle from '../../../Common/basicStyle';
 
 export const Basic = BasicStyle;
 
+export const PageWrap = styled.ScrollView`
+  ${Basic.PageWrap.inlineStyle.rules.join('')}
+`;
+
 export const BaseView = styled.ScrollView`
   margin-top: ${px2dp(10)}px;
   flex: 1;
@@ -109,6 +113,7 @@ export const SkipBox = styled.View`
 export const SkipLeft = Basic.ImgBox.extend`
   width: ${px2dp(48)}px;
   height: ${px2dp(48)}px;
+  background: #fff;
 `;
 
 export const SkipText = styled.Text`
@@ -122,4 +127,5 @@ export const SkipText = styled.Text`
 export const SkipRight = Basic.ImgBox.extend`
   height: ${px2dp(36)}px;
   width: ${px2dp(36)}px;
+  background: #fff;
 `;
