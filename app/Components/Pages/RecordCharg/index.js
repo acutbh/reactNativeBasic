@@ -3,6 +3,9 @@ import {
   FlatList
 } from 'react-native';
 import {NavigationBar} from 'teaset';
+import {
+  DatePicker,
+} from 'react-native-pickers';
 import ListLoad from '../../ListLoad';
 import BasicNav from '../../BasicNav';
 import Item from './Item';
@@ -102,6 +105,7 @@ export default class List extends Component {
 
   search = () => {
     console.log('搜索');
+    this.datePicker.show();
   }
 
   render() {
@@ -118,6 +122,19 @@ export default class List extends Component {
             refreshControl={<Style.Basic.RefreshControl onRefresh={this.refresh} refreshing={false} />}
           />
         </BasicNav>
+        <DatePicker
+          HH={false}
+          mm={false}
+          ss={false}
+          unit={this.state.unit}
+          startYear={this.state.startYear}
+          onPickerConfirm={(value) => {
+            alert(JSON.stringify(value))
+          }}
+          onPickerCancel={() => {
+            alert('cancel')
+          }}
+          ref={ref => this.datePicker = ref} />
       </Style.Basic.PageWrap>
     );
   }
