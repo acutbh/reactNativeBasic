@@ -2,7 +2,8 @@ import styled from 'styled-components';
 // import pxtorem from './pxtorem';
 
 // 主题
-export const mainColor = '#FFBF05'
+export const mainColor = '#FFBF05';
+export const mainColorRGB = [255,191,5,1];
 export const red = '#e94f4f';
 export const darkGray = '#333';
 export const gray = '#666';

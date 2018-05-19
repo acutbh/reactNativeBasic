@@ -186,7 +186,7 @@ export default class List extends Component {
   render() {
     return (
       <Style.Basic.PageWrap>
-        <BasicNav pageName='充电记录' rightBtn={<NavigationBar.IconButton style={{height:px2dp(64),marginTop:-px2dp(8)}} icon={Images.search} onPress={this.search} />}>
+        <BasicNav pageName='车辆绑定'>
           <FlatList
             ListFooterComponent={<ListLoad state={this.state.loadState}></ListLoad>}
             data={this.state.listData}

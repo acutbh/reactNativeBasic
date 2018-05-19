@@ -26,6 +26,7 @@ import Home from './Components/Pages/Home'; // 首页
 import Recharge from './Components/Pages/Recharge'; // 充电
 import My from './Components/Pages/My'; // 我的
 import RecordCharg from './Components/Pages/RecordCharg'; // 充电记录
+import MyCoupon from './Components/Pages/MyCoupon'; // 我的优惠券
 import Help from './Components/Pages/Help'; // 使用说明
 import Login from './Pages/Login/Login';
 import LoginPublic from './Pages/Login/LoginPublic';
@@ -123,6 +124,15 @@ const router = (...props) => (
         <Scene
           key="RecordChargRoot"
           component={RecordCharg}
+          hideNavBar
+          onExit={() => console.log('onExit')}
+          onLeft={Actions.pop}
+        />
+      </Stack>
+      <Stack key="MyCoupon">
+        <Scene
+          key="MyCouponRoot"
+          component={MyCoupon}
           hideNavBar
           onExit={() => console.log('onExit')}
           onLeft={Actions.pop}

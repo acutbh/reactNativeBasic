@@ -4,8 +4,6 @@ import {
 
 import * as Style from './style';
 
-import {NavigationBar} from 'teaset';
-
 import BasicNav from '../../BasicNav';
 
 export default class Help extends Component {
