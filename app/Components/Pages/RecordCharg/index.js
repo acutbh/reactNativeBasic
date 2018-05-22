@@ -197,23 +197,23 @@ export default class List extends Component {
     return (
       <Style.Basic.PageWrap>
         <BasicNav pageName='交易记录' rightBtn={<NavigationBar.IconButton style={{height:px2dp(64),marginTop:-px2dp(8)}} icon={Images.search} onPress={this.search} />}>
-          <View style={{flexDirection: 'row'}}>
-            <Wheel
-              style={{height: 200, flex: 1}}
-              itemStyle={{textAlign: 'center'}}
-              items={[2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026,2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]}
-            />
-            <Wheel
-              style={{height: 200, flex: 1}}
-              itemStyle={{textAlign: 'center'}}
-              items={[4, 5, 6, 2020, 2021, 2022, 2023, 2024, 2025, 2026,2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]}
-            />
-            <Wheel
-              style={{height: 200, flex: 1}}
-              itemStyle={{textAlign: 'center'}}
-              items={[1, 2, 3, 2020, 2021, 2022, 2023, 2024, 2025, 2026,2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]}
-            />
-          </View>
+          {/*<View style={{flexDirection: 'row'}}>*/}
+            {/*<Wheel*/}
+              {/*style={{height: 200, flex: 1}}*/}
+              {/*itemStyle={{textAlign: 'center'}}*/}
+              {/*items={[2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026,2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]}*/}
+            {/*/>*/}
+            {/*<Wheel*/}
+              {/*style={{height: 200, flex: 1}}*/}
+              {/*itemStyle={{textAlign: 'center'}}*/}
+              {/*items={[4, 5, 6, 2020, 2021, 2022, 2023, 2024, 2025, 2026,2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]}*/}
+            {/*/>*/}
+            {/*<Wheel*/}
+              {/*style={{height: 200, flex: 1}}*/}
+              {/*itemStyle={{textAlign: 'center'}}*/}
+              {/*items={[1, 2, 3, 2020, 2021, 2022, 2023, 2024, 2025, 2026,2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]}*/}
+            {/*/>*/}
+          {/*</View>*/}
           <FlatList
             ListFooterComponent={<ListLoad state={this.state.loadState}></ListLoad>}
             data={this.state.listData}

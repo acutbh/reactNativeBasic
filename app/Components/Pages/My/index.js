@@ -28,7 +28,7 @@ export default class My extends Component {
   render() {
     return (
       <Style.PageWrap refreshControl={<Style.Basic.RefreshControl onRefresh={this.refresh} refreshing={false} />}>
-        <NavigationBar hidden={true} />
+        <NavigationBar hidden={false} />
         <Head />
         <SkipList />
         <Login onClick={this.login} type='block' />

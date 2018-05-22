@@ -21,7 +21,7 @@ export default class BasicNav extends Component {
           type='ios'
           tintColor={Style.Basic.mainColor}
           title={
-            <NavigationBar.Title style={{marginTop:-px2dp(8), color: Style.Basic.darkGray}} text={this.props.pageName} />
+            <NavigationBar.Title style={{marginTop:-px2dp(22), color: Style.Basic.darkGray}} text={this.props.pageName} />
           }
           leftView={<NavigationBar.BackButton style={{marginTop:-px2dp(8)}} title='返回' onPress={() => Actions.pop()} />}
           rightView={this.props.rightBtn}/>
