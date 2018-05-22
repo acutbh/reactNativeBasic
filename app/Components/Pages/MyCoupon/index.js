@@ -186,7 +186,7 @@ export default class List extends Component {
   render() {
     return (
       <Style.Basic.PageWrap>
-        <BasicNav pageName='车辆绑定'>
+        <BasicNav pageName='我的优惠券'>
           <FlatList
             ListFooterComponent={<ListLoad state={this.state.loadState}></ListLoad>}
             data={this.state.listData}

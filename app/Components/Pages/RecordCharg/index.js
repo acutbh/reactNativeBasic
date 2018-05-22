@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import {
-  FlatList
+  FlatList,
+  View
 } from 'react-native';
 import Picker from 'react-native-picker';
-import {NavigationBar} from 'teaset';
+import {
+  NavigationBar,
+  Wheel,
+} from 'teaset';
 import ListLoad from '../../ListLoad';
 import BasicNav from '../../BasicNav';
 import Item from './Item';
@@ -156,9 +160,15 @@ export default class List extends Component {
       pickerFontSize: 14,
       pickerRowHeight: 36,
       onPickerConfirm: (pickedValue, pickedIndex) => {
+        this.setState({
+          showPicker: false
+        });
         console.log('date', pickedValue, pickedIndex);
       },
       onPickerCancel: (pickedValue, pickedIndex) => {
+        this.setState({
+          showPicker: false
+        });
         console.log('date', pickedValue, pickedIndex);
       },
       onPickerSelect: (pickedValue, pickedIndex) => {
@@ -186,7 +196,24 @@ export default class List extends Component {
   render() {
     return (
       <Style.Basic.PageWrap>
-        <BasicNav pageName='充电记录' rightBtn={<NavigationBar.IconButton style={{height:px2dp(64),marginTop:-px2dp(8)}} icon={Images.search} onPress={this.search} />}>
+        <BasicNav pageName='交易记录' rightBtn={<NavigationBar.IconButton style={{height:px2dp(64),marginTop:-px2dp(8)}} icon={Images.search} onPress={this.search} />}>
+          <View style={{flexDirection: 'row'}}>
+            <Wheel
+              style={{height: 200, flex: 1}}
+              itemStyle={{textAlign: 'center'}}
+              items={[2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026,2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]}
+            />
+            <Wheel
+              style={{height: 200, flex: 1}}
+              itemStyle={{textAlign: 'center'}}
+              items={[4, 5, 6, 2020, 2021, 2022, 2023, 2024, 2025, 2026,2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]}
+            />
+            <Wheel
+              style={{height: 200, flex: 1}}
+              itemStyle={{textAlign: 'center'}}
+              items={[1, 2, 3, 2020, 2021, 2022, 2023, 2024, 2025, 2026,2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]}
+            />
+          </View>
           <FlatList
             ListFooterComponent={<ListLoad state={this.state.loadState}></ListLoad>}
             data={this.state.listData}
