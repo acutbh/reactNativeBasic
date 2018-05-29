@@ -16,14 +16,14 @@ export default class BasicNav extends Component {
     return (
       <Style.Basic.Wrap>
         <NavigationBar
-          statusBarColor={IOS?'#fff':Style.Basic.darkGray}
-          style={{backgroundColor:'#fff', height:px2dp(128), marginTop:px2dp(16), paddingLeft:15, paddingRight:15, position:'absolute', top:0, left:0}}
+          statusBarColor={IOS?'#fff':'rgba(255,255,255,.2)'}
+          style={{backgroundColor:'#000', paddingLeft:15, paddingRight:15}}
           type='ios'
           tintColor={Style.Basic.mainColor}
           title={
-            <NavigationBar.Title style={{marginTop:-px2dp(22), color: Style.Basic.darkGray}} text={this.props.pageName} />
+            <NavigationBar.Title style={{backgroundColor: '#666', color: Style.Basic.darkGray}} text={this.props.pageName} />
           }
-          leftView={<NavigationBar.BackButton style={{marginTop:-px2dp(8)}} title='返回' onPress={() => Actions.pop()} />}
+          leftView={<NavigationBar.BackButton style={{backgroundColor: '#666', height:px2dp(64), lineHeight:px2dp(64)}} title='返回' onPress={() => Actions.pop()} />}
           rightView={this.props.rightBtn}/>
         <Style.Wrap>
           {this.props.children}
