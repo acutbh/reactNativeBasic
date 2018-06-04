@@ -120,7 +120,7 @@ export default class List extends Component {
   render() {
     return (
       <Style.Basic.PageWrap>
-        <BasicNav pageName='交易记录' rightBtn={<NavigationBar.LinkButton style={{backgroundColor: '#666',height:px2dp(64),lineHeight:px2dp(64),marginTop:-px2dp(8)}} title='筛选' onPress={this.search}></NavigationBar.LinkButton>}>
+        <BasicNav pageName='交易记录' rightBtn={<NavigationBar.LinkButton style={{backgroundColor: '#666',height:px2dp(64),alignItems:'center',marginTop:-px2dp(8)}} title='筛选' onPress={this.search}></NavigationBar.LinkButton>}>
           <FlatList
             ListFooterComponent={<ListLoad state={this.state.loadState}></ListLoad>}
             data={this.state.listData}
